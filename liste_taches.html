@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Tâches</title>
+</head>
+<body>
+    <h1>Liste des Tâches</h1>
+    <ul>
+        {% for nom, tache in taches.items() %}
+            <li><a href="{{ url_for('afficher_tache_par_nom', nom=nom) }}">{{ nom }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
